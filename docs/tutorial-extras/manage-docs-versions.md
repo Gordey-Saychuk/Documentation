@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Telegram виджет
 
-Для начала создаем компонент TelegramLoginButton bot_id меняем на id вашего бота дальше візваем компонент в нужно месте
+Для начала создаем компонент TelegramLoginButton bot_id меняем на id вашего бота и в data-auth-url вписываем url на страницы на которой находится кнопка в handleTelegramAuth прописуем ваше АПИ для авторизации дальше вызваем компонент в нужно месте
 
-```jsx title="auth.jsx"
+```jsx title="TelegramLoginButton.tsx"
 import { useEffect } from "react";
 import { BASE_URL } from "../../utils/static";
 import axios from "axios";
@@ -132,16 +132,7 @@ const TelegramLoginButton = () => {
        </button>
 
        <img style={{ width: "40px", height: "35px" }} src={telegrammIcon}></img>
-
-
-
-
-
-
-
     </div>
-
-
   );
 };
 
@@ -152,7 +143,7 @@ export default TelegramLoginButton;
 
 В index.css
 
-```jsx title="auth.jsx"
+```jsx title="index.css"
 #telegram-login-container {
   display: none;
 }
